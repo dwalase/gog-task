@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'lib-ui',
+  selector: 'lib-card',
   imports: [CommonModule],
-  templateUrl: './ui.component.html',
-  styleUrl: './ui.component.css',
+  templateUrl: './card.component.html',
+  styleUrl: './card.component.scss',
 })
-export class UiComponent {}
+export class CardComponent {}
