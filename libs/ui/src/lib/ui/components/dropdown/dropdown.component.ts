@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -7,4 +7,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './dropdown.component.html',
   styleUrl: './dropdown.component.scss',
 })
-export class DropdownComponent {}
+export class DropdownComponent {
+  protected readonly iconUrl = input.required<string>();
+  protected readonly dropdownText = input.required<string>();
+}

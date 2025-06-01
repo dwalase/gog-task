@@ -9,5 +9,8 @@ export default meta;
 type Story = StoryObj<DropdownComponent>;
 
 export const Primary: Story = {
-  args: {},
+  args: {
+    iconUrl: '',
+    dropdownText: '2'
+  },
 };
