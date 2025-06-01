@@ -13,6 +13,12 @@
   font-weight: 600;
 }
 
+@mixin text-paragraph-large {
+  @include text-paragraph;
+
+  font-size: 14px;
+}
+
 @mixin text-subheader {
   font-size: 14px;
   line-height: 17px;

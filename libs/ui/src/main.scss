@@ -4,3 +4,5 @@
 
 @forward "./sass/utils/mixins";
 @forward "./sass/utils/palette";
+
+@import '@angular/cdk/overlay-prebuilt.css';

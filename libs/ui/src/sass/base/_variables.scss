@@ -3,29 +3,29 @@
 @property --background-secondary {
   syntax: "<color>";
   inherits: false;
-  initial-value: #{palette.$gray};
+  initial-value: #{palette.$gray50};
 }
 
 @property --text-white {
   syntax: "<color>";
   inherits: false;
-  initial-value: #{palette.$white};
+  initial-value: #{palette.$gray25};
 }
 
 @property --text-primary {
   syntax: "<color>";
   inherits: false;
-  initial-value: #{palette.$black};
+  initial-value: #{palette.$gray700};
 }
 
 @property --text-secondary {
   syntax: "<color>";
   inherits: false;
-  initial-value: #{palette.$dark};
+  initial-value: #{palette.$gray400};
 }
 
 @property --shadow {
   syntax: "<color>";
   inherits: false;
-  initial-value: #{palette.$gray};
+  initial-value: #{palette.$gray50};
 }
