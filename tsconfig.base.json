@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@gog-task/store": ["libs/store/src/index.ts"],
       "@gog-task/ui": ["libs/ui/src/index.ts"]
     }
   },
