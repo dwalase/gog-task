@@ -1,6 +1,6 @@
 import { patchState, signalStore, withHooks, withMethods } from '@ngrx/signals';
 import { Game, Games } from '@gog-task/core';
-import { setEntities, withEntities } from '@ngrx/signals/entities';
+import { setEntities, updateEntity, withEntities } from '@ngrx/signals/entities';
 
 export const GameStore = signalStore(
   { providedIn: 'root' },
@@ -8,6 +8,13 @@ export const GameStore = signalStore(
   withMethods((store) => ({
       load() {
         patchState(store, setEntities(Games))
+      },
+      addToCart(id: number) {
+        patchState(store, updateEntity(
+          {
+            id: id, changes: { ownership: 'InCart' }
+          })
+        )
       }
     })
   ),
