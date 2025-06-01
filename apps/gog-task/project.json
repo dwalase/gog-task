@@ -20,6 +20,16 @@
           {
             "glob": "**/*",
             "input": "apps/gog-task/public"
+          },
+          {
+            "input": "libs/ui/assets",
+            "glob": "**.*",
+            "output": "assets"
+          },
+          {
+            "input": "libs/core/assets",
+            "glob": "**.*",
+            "output": "assets"
           }
         ],
         "styles": ["apps/gog-task/src/styles.scss"],

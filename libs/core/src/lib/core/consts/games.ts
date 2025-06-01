@@ -12,28 +12,28 @@ export const Games: Game[] = [
     id: 5,
     name: 'neverwinter nights',
     price: 9.99,
-    thumbnail: 'assets/neverwinter',
+    thumbnail: 'assets/neverwinter.png',
     discount: 50
   },
   {
     id: 4,
     name: 'The settlers 2: gold',
     price: 9.99,
-    thumbnail: 'assets/settlers',
+    thumbnail: 'assets/settlers.png',
     ownership: 'InCart'
   },
   {
     id: 3,
     name: 'chaos on deponia',
     price: 9.99,
-    thumbnail: 'assets/deponia',
+    thumbnail: 'assets/deponia.png',
     ownership: 'Owned'
   },
   {
     id: 2,
     name: 'oddworld: stranger’s wrath',
     price: 9.99,
-    thumbnail: 'assets/oddworld',
+    thumbnail: 'assets/oddworld.png',
     discount: 50
   }
 ];
