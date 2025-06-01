@@ -1,5 +1,5 @@
 <button class="dropdown" cdkOverlayOrigin #trigger
-        (click)="isOpen = !isOpen">
+        (click)="isOpen.set(!isOpen())">
   @if (dropdownIcon()) {
     <img [ngSrc]="dropdownIcon() || ''" alt="Shopping cart" width="16" height="16">
   }
@@ -8,9 +8,9 @@
 <ng-template
   cdkConnectedOverlay
   [cdkConnectedOverlayOrigin]="trigger"
-  [cdkConnectedOverlayOpen]="isOpen"
-  (detach)="isOpen = false">
+  [cdkConnectedOverlayOpen]="isOpen()"
+  (detach)="isOpen.set(false)">
   <div class="dropdown-panel">
-    TEST
+    <ng-content></ng-content>
   </div>
 </ng-template>

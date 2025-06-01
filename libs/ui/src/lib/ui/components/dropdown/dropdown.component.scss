@@ -15,7 +15,8 @@
   border-color: main.$gray100;
 
   &-panel {
-    background: #00905E;
+    box-shadow: 0 2px 10px 0 #00000080;
+    border: 1px solid #B8B8B880;
     width: 150px;
     height: 150px;
   }

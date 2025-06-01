@@ -1,7 +1,7 @@
-import { Component, input, signal, TemplateRef, ViewChild } from '@angular/core';
+import { Component, input, signal } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { Icons } from '../../consts/Icons';
-import { CdkConnectedOverlay, CdkOverlayOrigin, OverlayRef } from '@angular/cdk/overlay';
+import { CdkConnectedOverlay, CdkOverlayOrigin } from '@angular/cdk/overlay';
 
 @Component({
   selector: 'lib-dropdown',
@@ -18,5 +18,5 @@ export class DropdownComponent {
   readonly dropdownText = input.required<string>();
   readonly dropdownIcon = input<Icons>();
 
-  protected isOpen = false;
+  protected isOpen = signal(false);
 }
