@@ -1,4 +1,4 @@
 @for (game of store.entities(); track game.id) {
-  <img [ngSrc]="game.thumbnail" alt="" width="190" height="110">
+  <app-game-card [game]="game"/>
 }
 <router-outlet></router-outlet>

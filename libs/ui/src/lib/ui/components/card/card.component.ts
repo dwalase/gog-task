@@ -9,14 +9,14 @@ import { CommonModule, NgOptimizedImage } from '@angular/common';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CardComponent {
-  protected readonly imgUrl = input.required<string>();
-  protected readonly header = input.required<string>();
-  protected readonly buttonText = input.required<string>();
-  protected readonly buttonDisabled = input<boolean>(false);
-  protected readonly buttonDisabledDontBlur = input<boolean>(false);
-  protected readonly badge = input<string>();
+  readonly imgUrl = input.required<string>();
+  readonly header = input.required<string>();
+  readonly buttonText = input.required<string>();
+  readonly buttonDisabled = input<boolean>(false);
+  readonly buttonDisabledDontBlur = input<boolean>(false);
+  readonly badge = input<string>();
 
-  protected readonly buttonClick = output<void>();
+  readonly buttonClick = output<void>();
 
   protected onButtonClick(): void {
     this.buttonClick.emit();
