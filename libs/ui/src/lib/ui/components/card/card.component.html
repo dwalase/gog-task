@@ -5,6 +5,12 @@
     @if (badge()) {
       <div class="card__badge">{{ badge() }}</div>
     }
-    <button class="lib-button lib-button__secondary">{{ buttonText() }}</button>
+    <button
+      class="lib-button lib-button--secondary"
+      [ngClass]="{'lib-button--disabled-dont-blur': buttonDisabledDontBlur()}"
+      [disabled]="buttonDisabled()"
+      (click)="onButtonClick()">
+      {{ buttonText() }}
+    </button>
   </div>
 </div>
