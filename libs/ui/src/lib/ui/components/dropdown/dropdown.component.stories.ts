@@ -7,7 +7,7 @@ const meta: Meta<DropdownComponent> = {
   title: 'DropdownComponent',
 };
 export default meta;
-type Story = StoryObj<DropdownComponent>;
+type Story = StoryObj<DropdownComponent & {dropdownText: string, dropdownIcon: Icons}>;
 
 export const Primary: Story = {
   args: {

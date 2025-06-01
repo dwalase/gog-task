@@ -13,4 +13,10 @@
   border-left: 1px solid;
   border-right: 1px solid;
   border-color: main.$gray100;
+
+  &-panel {
+    background: #00905E;
+    width: 150px;
+    height: 150px;
+  }
 }
