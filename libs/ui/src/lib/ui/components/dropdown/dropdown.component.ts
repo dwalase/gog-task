@@ -19,4 +19,12 @@ export class DropdownComponent {
   readonly dropdownIcon = input<Icons>();
 
   protected isOpen = signal(false);
+
+  protected switchDropdown(): void {
+    this.isOpen.set(!this.isOpen());
+  }
+
+  protected setDropdown(visibility: boolean): void {
+    this.isOpen.set(visibility);
+  }
 }
