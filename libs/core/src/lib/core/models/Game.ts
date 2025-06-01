@@ -1,6 +1,9 @@
 export interface Game {
+  id: number;
   name: string;
   thumbnail: string;
   price: number;
-  discount: number;
+  ownership?: 'Owned' | 'InCart';
+  gameOfTheWeek?: boolean;
+  discount?: number;
 }
