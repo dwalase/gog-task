@@ -10,8 +10,9 @@
 
   &__title {
     @include main.text-subheader;
+    @include main.ellipsis-lines(2);
 
-    padding: 9px;
+    margin: 9px;
     text-transform: uppercase;
     flex-grow: 1;
   }
