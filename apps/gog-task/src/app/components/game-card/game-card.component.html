@@ -1,0 +1,10 @@
+<lib-card
+  class="game-card"
+  [imgUrl]="game().thumbnail"
+  [header]="game().name"
+  [badge]="game().discount | discount"
+  (buttonClick)="addToCart()"
+  [buttonDisabled]="!!game().ownership"
+  [buttonDisabledDontBlur]="game().ownership === 'InCart'"
+  [buttonText]="game() | gamePrice"
+/>
