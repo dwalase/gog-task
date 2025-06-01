@@ -1,0 +1,53 @@
+@use 'main';
+
+.card {
+  @include main.background-secondary;
+  @include main.box-shadow;
+
+  display: flex;
+  flex-direction: column;
+  width: 196px;
+
+  &__title {
+    padding: 7px 7px 0;
+    font-size: 14px;
+    text-transform: uppercase;
+    flex-grow: 1;
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 0 7px 7px;
+    gap: 6px;
+  }
+
+  &__badge {
+    @include main.text-white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    height: 22px;
+    min-width: 42px;
+    background: main.$green;
+    border-radius: 2px;
+    text-align: center;
+    padding: 0 6px;
+  }
+
+  &__button {
+    @include main.background-secondary;
+    @include main.text-secondary;
+
+    border-radius: 2px;
+    height: 22px;
+    font-size: 13px;
+    min-width: 42px;
+    border: solid 1px main.$darkGray;
+    box-shadow: 0 1px 1px 0 main.$lightGray;
+    padding: 0 6px;
+  }
+}

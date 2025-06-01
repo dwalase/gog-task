@@ -1,0 +1,31 @@
+@use './sass/utils/palette' as palette;
+
+@property --background-secondary {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #{palette.$gray};
+}
+
+@property --text-white {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #{palette.$white};
+}
+
+@property --text-primary {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #{palette.$black};
+}
+
+@property --text-secondary {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #{palette.$dark};
+}
+
+@property --shadow {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #{palette.$gray};
+}
