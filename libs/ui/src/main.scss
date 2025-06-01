@@ -1,8 +1,8 @@
-@import '@angular/cdk/overlay-prebuilt.css';
-
 @use './sass/base/reset';
 @use './sass/base/variables';
 @use './sass/base/typography';
 
 @forward "./sass/utils/mixins";
 @forward "./sass/utils/palette";
+
+@import '@angular/cdk/overlay-prebuilt.css';
