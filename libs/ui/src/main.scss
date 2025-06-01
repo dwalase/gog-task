@@ -1,6 +1,7 @@
 @use './sass/base/reset';
 @use './sass/base/variables';
 @use './sass/base/typography';
+@use "./sass/components/button";
 
 @forward "./sass/utils/mixins";
 @forward "./sass/utils/palette";
