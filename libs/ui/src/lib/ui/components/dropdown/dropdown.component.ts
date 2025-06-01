@@ -1,13 +1,14 @@
 import { Component, input } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
+import { Icons } from '../../consts/Icons';
 
 @Component({
   selector: 'lib-dropdown',
-  imports: [CommonModule],
+  imports: [CommonModule, NgOptimizedImage],
   templateUrl: './dropdown.component.html',
   styleUrl: './dropdown.component.scss',
 })
 export class DropdownComponent {
-  protected readonly iconUrl = input.required<string>();
   protected readonly dropdownText = input.required<string>();
+  protected readonly dropdownIcon = input<Icons>();
 }

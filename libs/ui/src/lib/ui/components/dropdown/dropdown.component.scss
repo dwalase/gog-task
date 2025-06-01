@@ -1,6 +1,16 @@
 @use 'main';
 
 .dropdown {
+  @include main.text-paragraph-large;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
   height: 58px;
-  background: main.$pureWhite;
+  width: 58px;
+  background: main.$gray0;
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-color: main.$gray100;
 }

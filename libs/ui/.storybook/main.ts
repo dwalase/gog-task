@@ -11,6 +11,12 @@ const config: StorybookConfig = {
       },
     },
   },
+  staticDirs: [
+    {
+      from: '../assets',
+      to: 'assets',
+    },
+  ],
 };
 
 export default config;

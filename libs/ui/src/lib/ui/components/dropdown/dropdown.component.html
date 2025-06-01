@@ -1,3 +1,6 @@
-<div>
+<button class="dropdown">
+  @if (dropdownIcon()) {
+    <img [ngSrc]="dropdownIcon() || ''" alt="Shopping cart" width="16" height="16">
+  }
   {{ dropdownText() }}
-</div>
+</button>
