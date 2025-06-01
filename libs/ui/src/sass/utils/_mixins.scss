@@ -1,3 +1,18 @@
 @mixin background-secondary {
   background: var(--background-secondary);
 }
+
+@mixin box-shadow {
+  box-shadow: 0 1px 5px 0 var(--shadow);
+}
+
+@mixin text-white {
+  color: var(--text-white);
+}
+@mixin text-primary {
+  color: var(--text-primary);
+}
+
+@mixin text-secondary {
+  color: var(--text-secondary);
+}

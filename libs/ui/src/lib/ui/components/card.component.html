@@ -1,3 +1,10 @@
 <div class="card">
-  WORKS
+  <img [ngSrc]="imgUrl()" [alt]="header()" width="196" height="110">
+  <h2 class="card__title">{{ header() }}</h2>
+  <div class="card__actions">
+    @if (badge()) {
+      <div class="card__badge">{{ badge() }}</div>
+    }
+    <button class="card__button">{{ buttonText() }}</button>
+  </div>
 </div>

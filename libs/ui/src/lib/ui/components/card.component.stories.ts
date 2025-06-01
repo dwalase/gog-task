@@ -9,5 +9,10 @@ export default meta;
 type Story = StoryObj<CardComponent>;
 
 export const Primary: Story = {
-  args: {},
+  args: {
+    header: 'assassin’s creed: director’s cut',
+    imgUrl: 'https://loremflickr.com/cache/resized/defaultImage.small_1280_720_nofilter.jpg',
+    badge: '-50%',
+    buttonText: '$10'
+  },
 };
