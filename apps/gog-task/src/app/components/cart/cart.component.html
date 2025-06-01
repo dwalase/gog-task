@@ -1,0 +1,19 @@
+<lib-dropdown
+  [dropdownIcon]="Icons.ShoppingCart"
+  [dropdownText]="inCartCount()">
+  <div class="cart-panel">
+    <div class="cart-panel__header">
+    </div>
+    @for (game of inCart(); track game.id) {
+      <div class="cart-panel__position">
+        <img [ngSrc]="game.thumbnail" [alt]="game.name" width="100" height="60">
+        <div class="cart-panel__description">
+            {{game.name}}
+        </div>
+        <div>
+          ${{game.price}}
+        </div>
+      </div>
+    }
+  </div>
+</lib-dropdown>
