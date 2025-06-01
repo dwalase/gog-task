@@ -1,0 +1,7 @@
+<div class="homepage">
+  <div class="homepage__games">
+    @for (game of games(); track game.id) {
+      <app-game-card [game]="game"/>
+    }
+  </div>
+</div>
