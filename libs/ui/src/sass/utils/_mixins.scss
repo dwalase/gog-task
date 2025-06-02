@@ -1,3 +1,9 @@
+@use "sass/utils/palette" as palette;
+
+@mixin background-primary {
+  background: linear-gradient(0deg, palette.$pink500 0%, palette.$pink400 100%);
+}
+
 @mixin background-secondary {
   background: var(--background-secondary);
 }
@@ -17,6 +23,13 @@
   @include text-paragraph;
 
   font-size: 14px;
+}
+
+@mixin text-header {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 100%;
+  letter-spacing: 0;
 }
 
 @mixin text-subheader {
@@ -44,4 +57,15 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+@mixin ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin content-width {
+  max-width: 1060px;
+  width: 100%;
 }

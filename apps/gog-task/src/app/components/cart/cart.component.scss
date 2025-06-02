@@ -1,0 +1,86 @@
+@use "main";
+
+.remove-button {
+  display: block;
+  width: fit-content;
+  transition: height 0.1s ease-out;
+  height: 0;
+
+  &:focus {
+    height: 1rem;
+  }
+}
+
+.lib-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 42px;
+  min-width: 132px;
+}
+
+.cart-panel {
+  display: grid;
+  width: 370px;
+  min-height: 100px;
+  grid-auto-rows: 1fr;
+
+  &__header {
+    @include main.text-paragraph-large;
+    font-size: 15px;
+
+    display: flex;
+    padding: 9px;
+    gap: 9px;
+    align-items: center;
+    text-transform: uppercase;
+
+    :first-child {
+      flex-grow: 1;
+    }
+  }
+
+  &__position {
+    display: flex;
+    align-items: center;
+    width: 370px;
+    padding: 5px;
+    gap: 9px;
+
+    &:hover {
+      .remove-button {
+        height: 1rem;
+      }
+
+      .cart-panel__description {
+        gap: 9px;
+      }
+    }
+  }
+
+  &__description {
+    @include main.text-paragraph-large;
+    @include main.ellipsis;
+
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    flex-grow: 1;
+
+    span {
+      @include main.ellipsis;
+    }
+  }
+
+  &__price {
+    @include main.text-paragraph-large;
+  }
+
+  &__placeholder {
+    @include main.text-paragraph-large;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

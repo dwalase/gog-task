@@ -1,0 +1,9 @@
+@use "main";
+
+.menu {
+  @include main.content-width;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

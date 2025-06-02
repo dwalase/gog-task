@@ -1,6 +1,18 @@
+@use "main";
+
 .homepage {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  gap: 20px;
+
+
+  &__header {
+    @include main.text-header;
+  }
+
   &__games {
     display: flex;
-    gap: 20px;
+    justify-content: space-between;
   }
 }

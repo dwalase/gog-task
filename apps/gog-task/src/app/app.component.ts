@@ -1,9 +1,10 @@
 import { Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { GameStore } from '@gog-task/store';
+import { MenuComponent } from './components/menu/menu.component';
 
 @Component({
-  imports: [RouterModule],
+  imports: [RouterModule, MenuComponent],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
