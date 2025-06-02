@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, computed, inject, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DiscountPipe, Game, GamePricePipe } from '@gog-task/core';
 import { CardComponent } from '@gog-task/ui';
