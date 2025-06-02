@@ -45,3 +45,8 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+@mixin content-width {
+  max-width: 1280px;
+  width: 100%;
+}

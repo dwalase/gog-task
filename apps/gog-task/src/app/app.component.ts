@@ -5,7 +5,7 @@ import { CartComponent } from './components/cart/cart.component';
 import { MenuComponent } from './components/menu/menu.component';
 
 @Component({
-  imports: [RouterModule, CartComponent, MenuComponent],
+  imports: [RouterModule, MenuComponent],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
