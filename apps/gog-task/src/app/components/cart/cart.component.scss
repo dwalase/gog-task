@@ -1,0 +1,47 @@
+@use "main";
+
+.remove-button {
+  display: block;
+  width: fit-content;
+  transition: height 0.1s ease-out;
+  height: 0;
+
+  &:focus {
+    height: 1rem;
+  }
+}
+
+.cart-panel {
+  &__position {
+    display: flex;
+    align-items: center;
+    width: 370px;
+    padding: 5px;
+    gap: 9px;
+
+    &:hover {
+      .remove-button {
+        height: 1rem;
+      }
+    }
+  }
+
+  &__description {
+    @include main.text-paragraph-large;
+    @include main.ellipsis;
+
+    display: flex;
+    gap: 9px;
+    flex-direction: column;
+    text-transform: uppercase;
+    flex-grow: 1;
+
+    span {
+      @include main.ellipsis;
+    }
+  }
+
+  &__price {
+    @include main.text-paragraph-large;
+  }
+}

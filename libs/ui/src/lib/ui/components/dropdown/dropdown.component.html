@@ -1,4 +1,5 @@
 <button class="dropdown lib-button" cdkOverlayOrigin #trigger
+        [ngClass]="{'dropdown--active': isOpen()}"
         (click)="switchDropdown()">
   @if (dropdownIcon()) {
     <img [ngSrc]="dropdownIcon() || ''" alt="Shopping cart" width="16" height="16">

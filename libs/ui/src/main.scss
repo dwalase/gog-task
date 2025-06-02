@@ -2,6 +2,7 @@
 @use './sass/base/variables';
 @use './sass/base/typography';
 @use "./sass/components/button";
+@use "./sass/components/link";
 
 @forward "./sass/utils/mixins";
 @forward "./sass/utils/palette";

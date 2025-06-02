@@ -5,7 +5,6 @@ import {
   CdkConnectedOverlay,
   CdkOverlayOrigin,
   ConnectedPosition,
-  FlexibleConnectedPositionStrategy
 } from '@angular/cdk/overlay';
 
 @Component({
