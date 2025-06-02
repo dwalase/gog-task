@@ -32,8 +32,15 @@ export const Games: Game[] = [
   {
     id: 2,
     name: 'oddworld: stranger’s wrath',
-    price: 9.99,
+    price: 5.99,
     thumbnail: 'assets/oddworld.png',
     discount: 50
+  },
+  {
+    id: 1,
+    name: 'witcher',
+    price: 9.99,
+    thumbnail: 'assets/witcher.png',
+    featured: true
   }
 ];

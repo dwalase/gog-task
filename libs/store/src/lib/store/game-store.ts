@@ -10,6 +10,9 @@ export const GameStore = signalStore(
     notFeatured: computed(() =>
       entities().filter((game) => !game.featured)
     ),
+    featured: computed(() =>
+      entities().find((game) => game.featured)
+    ),
     inCart: computed(() =>
       entities().filter((game) => game.ownership === 'InCart')
     )

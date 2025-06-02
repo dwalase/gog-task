@@ -25,6 +25,13 @@
   font-size: 14px;
 }
 
+@mixin text-header {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
 @mixin text-subheader {
   font-size: 14px;
   line-height: 17px;
@@ -59,6 +66,6 @@
 }
 
 @mixin content-width {
-  max-width: 1070px;
+  max-width: 1060px;
   width: 100%;
 }
