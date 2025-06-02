@@ -12,6 +12,7 @@
   [cdkConnectedOverlayOpen]="isOpen()"
   (detach)="setDropdown(false)"
   [cdkConnectedOverlayBackdropClass]="'cdk-overlay-transparent-backdrop'"
+  [cdkConnectedOverlayPositions]="[dropdownConnection]"
   (backdropClick)="setDropdown(false)">
   <div class="dropdown-panel">
     <div class="dropdown-panel__content">

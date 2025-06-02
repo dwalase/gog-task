@@ -16,11 +16,13 @@
 
   &-panel {
     padding: 0 10px 10px 0;
+    transform: translateX(10px);
     overflow: hidden;
 
     &__content {
       min-width: 150px;
       min-height: 150px;
+      background: main.$gray0;
       box-shadow: 0 2px 10px 0 #00000080;
       border: 1px solid #B8B8B880;
       border-top: none;

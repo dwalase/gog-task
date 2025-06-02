@@ -1,7 +1,12 @@
 import { ChangeDetectionStrategy, Component, input, signal } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { Icons } from '../../consts/Icons';
-import { CdkConnectedOverlay, CdkOverlayOrigin } from '@angular/cdk/overlay';
+import {
+  CdkConnectedOverlay,
+  CdkOverlayOrigin,
+  ConnectedPosition,
+  FlexibleConnectedPositionStrategy
+} from '@angular/cdk/overlay';
 
 @Component({
   selector: 'lib-dropdown',
@@ -16,6 +21,13 @@ import { CdkConnectedOverlay, CdkOverlayOrigin } from '@angular/cdk/overlay';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DropdownComponent {
+  readonly dropdownConnection: ConnectedPosition = {
+    originX: 'end',
+    originY: 'bottom',
+    overlayX: 'end',
+    overlayY: 'top'
+  }
+
   readonly dropdownText = input.required<string>();
   readonly dropdownIcon = input<Icons>();
 
