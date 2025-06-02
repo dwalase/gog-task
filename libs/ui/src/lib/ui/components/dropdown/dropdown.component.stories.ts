@@ -14,4 +14,18 @@ export const Primary: Story = {
     dropdownText: '2',
     dropdownIcon: Icons.ShoppingCart
   },
+  argTypes: {
+    dropdownIcon: {
+      options: Object.values(Icons),
+      mapping: Object.values(Icons),
+      control: {
+        type: 'select',
+        labels: Object.keys(Icons),
+      },
+    },
+  },
+  render: (args: any) => ({
+    props: { ...args },
+    template: `<lib-dropdown [dropdownText]="dropdownText" [dropdownIcon]="dropdownIcon">TEST VALUE</lib-dropdown>`
+  })
 };
