@@ -26,6 +26,14 @@
     }
   }
 
+  &--primary {
+    @include mixins.background-primary;
+    @include mixins.text-white;
+
+    border: none;
+    box-shadow: 0 1px 3px 0 #0000004D;
+  }
+
   &--secondary {
     @include mixins.background-secondary;
     @include mixins.text-secondary;

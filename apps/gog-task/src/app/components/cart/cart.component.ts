@@ -16,6 +16,19 @@ export class CartComponent {
   private readonly store = inject(GameStore);
   protected readonly inCart = this.store.inCart;
   protected readonly inCartCount = computed(() =>
-    this.inCart().length.toString()
+    this.inCart().length
   );
+  protected readonly inCartPriceSum = computed(() =>
+    this.inCart()
+      .map(game => game.price)
+      .reduce((previous, current) =>  previous + current, 0)
+  );
+
+  protected removeFromCart(id: number): void {
+    this.store.removeFromCart(id);
+  }
+
+  protected removeAllFromCart(): void {
+    this.store.removeAllFromCart();
+  }
 }

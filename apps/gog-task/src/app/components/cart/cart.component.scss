@@ -11,7 +11,35 @@
   }
 }
 
+.lib-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 42px;
+  min-width: 132px;
+}
+
 .cart-panel {
+  display: grid;
+  width: 370px;
+  min-height: 100px;
+  grid-auto-rows: 1fr;
+
+  &__header {
+    @include main.text-paragraph-large;
+    font-size: 15px;
+
+    display: flex;
+    padding: 9px;
+    gap: 9px;
+    align-items: center;
+    text-transform: uppercase;
+
+    :first-child {
+      flex-grow: 1;
+    }
+  }
+
   &__position {
     display: flex;
     align-items: center;
@@ -23,6 +51,10 @@
       .remove-button {
         height: 1rem;
       }
+
+      .cart-panel__description {
+        gap: 9px;
+      }
     }
   }
 
@@ -31,7 +63,6 @@
     @include main.ellipsis;
 
     display: flex;
-    gap: 9px;
     flex-direction: column;
     text-transform: uppercase;
     flex-grow: 1;
@@ -43,5 +74,13 @@
 
   &__price {
     @include main.text-paragraph-large;
+  }
+
+  &__placeholder {
+    @include main.text-paragraph-large;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

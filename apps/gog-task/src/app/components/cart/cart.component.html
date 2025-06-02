@@ -1,19 +1,34 @@
 <lib-dropdown
   [dropdownIcon]="Icons.ShoppingCart"
-  [dropdownText]="inCartCount()">
+  [dropdownText]="inCartCount().toString()">
   <div class="cart-panel">
-    <div class="cart-panel__header">
-    </div>
-    @for (game of inCart(); track game.id) {
-      <div class="cart-panel__position">
-        <img [ngSrc]="game.thumbnail" [alt]="game.name" width="100" height="60">
-        <div class="cart-panel__description">
-          <span>{{game.name}}</span>
-          <button class="remove-button lib-link">Remove</button>
+    @if (inCartCount() > 0) {
+      <div class="cart-panel__header">
+      <span>
+        {{inCartCount()}} ITEMS IN CART
+      </span>
+        <span>
+        ${{inCartPriceSum()}}
+      </span>
+        <button class="lib-button lib-button--primary" (click)="removeAllFromCart()">
+          CLEAR CART
+        </button>
+      </div>
+      @for (game of inCart(); track game.id) {
+        <div class="cart-panel__position">
+          <img [ngSrc]="game.thumbnail" [alt]="game.name" width="100" height="60">
+          <div class="cart-panel__description">
+            <span>{{game.name}}</span>
+            <button class="remove-button lib-link" (click)="removeFromCart(game.id)">Remove</button>
+          </div>
+          <div class="cart-panel__price">
+            ${{game.price}}
+          </div>
         </div>
-        <div class="cart-panel__price">
-          ${{game.price}}
-        </div>
+      }
+    } @else {
+      <div class="cart-panel__placeholder">
+        CART IS EMPTY
       </div>
     }
   </div>

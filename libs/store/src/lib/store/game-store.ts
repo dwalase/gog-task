@@ -1,6 +1,6 @@
 import { patchState, signalStore, withComputed, withHooks, withMethods } from '@ngrx/signals';
 import { Game, Games } from '@gog-task/core';
-import { setEntities, updateEntity, withEntities } from '@ngrx/signals/entities';
+import { setEntities, updateAllEntities, updateEntity, withEntities } from '@ngrx/signals/entities';
 import { computed } from '@angular/core';
 
 export const GameStore = signalStore(
@@ -25,6 +25,21 @@ export const GameStore = signalStore(
           id: id,
           changes: { ownership: 'InCart' },
         })
+      );
+    },
+    removeFromCart(id: number) {
+      patchState(
+        store,
+        updateEntity({
+          id: id,
+          changes: { ownership: undefined },
+        })
+      );
+    },
+    removeAllFromCart() {
+      patchState(
+        store,
+        updateAllEntities((game) => ({ownership: game.ownership === 'InCart' ? undefined : game.ownership}))
       );
     },
   })),

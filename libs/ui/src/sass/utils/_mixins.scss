@@ -1,3 +1,9 @@
+@use "sass/utils/palette" as palette;
+
+@mixin background-primary {
+  background: linear-gradient(0deg, palette.$pink500 0%, palette.$pink400 100%);
+}
+
 @mixin background-secondary {
   background: var(--background-secondary);
 }
