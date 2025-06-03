@@ -11,7 +11,7 @@ type Story = StoryObj<CardComponent>;
 export const Primary: Story = {
   args: {
     header: 'assassin’s creed: director’s cut',
-    imgUrl: 'https://loremflickr.com/cache/resized/defaultImage.small_1280_720_nofilter.jpg',
+    imgUrl: 'https://fastly.picsum.photos/id/993/196/110.jpg?hmac=xDD07jMRWWYjtXrBAyqZQlMJ-sUifBYb4BUMdRbgOO4',
     badge: '-50%',
     buttonText: '$10',
     buttonDisabled: false,
@@ -22,7 +22,7 @@ export const Primary: Story = {
 export const Disabled: Story = {
   args: {
     header: 'assassin’s creed: director’s cut',
-    imgUrl: 'https://loremflickr.com/cache/resized/defaultImage.small_1280_720_nofilter.jpg',
+    imgUrl: 'https://fastly.picsum.photos/id/993/196/110.jpg?hmac=xDD07jMRWWYjtXrBAyqZQlMJ-sUifBYb4BUMdRbgOO4',
     badge: '-50%',
     buttonText: '$10',
     buttonDisabled: true,
@@ -33,8 +33,7 @@ export const Disabled: Story = {
 export const WithoutBadge: Story = {
   args: {
     header: 'assassin’s creed: director’s cut',
-    imgUrl: 'https://loremflickr.com/cache/resized/defaultImage.small_1280_720_nofilter.jpg',
-    badge: '-50%',
+    imgUrl: 'https://fastly.picsum.photos/id/993/196/110.jpg?hmac=xDD07jMRWWYjtXrBAyqZQlMJ-sUifBYb4BUMdRbgOO4',
     buttonText: '$10',
     buttonDisabled: false,
     buttonDisabledDontBlur: false

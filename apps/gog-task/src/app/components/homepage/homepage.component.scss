@@ -23,11 +23,15 @@
     justify-content: space-between;
     flex-wrap: wrap;
 
+    & > * {
+      width: 194px;
+    }
+
     @include main.mobile {
       justify-content: space-around;
 
       & > * {
-        max-width: 150px;
+        width: 150px;
       }
     }
   }
