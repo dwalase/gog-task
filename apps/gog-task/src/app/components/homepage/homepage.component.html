@@ -1,7 +1,9 @@
 <div class="homepage">
   <h1 class="homepage__header">GAME OF THE WEEK</h1>
   @if (featuredGame()) {
-    <img [ngSrc]="featuredGame()?.thumbnail || ''" alt="Featured game" width="1060" height="370" priority>
+    <div class="homepage__featured">
+      <img [ngSrc]="featuredGame()?.thumbnail || ''" alt="Featured game" fill priority>
+    </div>
   }
   <div class="homepage__games">
     @for (game of games(); track game.id) {

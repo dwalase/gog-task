@@ -6,7 +6,12 @@
 
   display: flex;
   flex-direction: column;
-  width: 196px;
+  max-width: 196px;
+
+  &__image {
+    position: relative;
+    aspect-ratio: 196/110;
+  }
 
   &__title {
     @include main.text-subheader;
