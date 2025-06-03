@@ -8,7 +8,7 @@
           {{inCartCount()}} ITEMS IN CART
         </span>
         <span>
-        ${{inCartPriceSum()}}
+        {{inCartPriceSum() | price}}
       </span>
         <button class="lib-button lib-button--primary" (click)="removeAllFromCart()">
           CLEAR CART
@@ -22,7 +22,7 @@
             <button class="remove-button lib-link" (click)="removeFromCart(game.id)">Remove</button>
           </div>
           <div class="cart-panel__price">
-            ${{game.price}}
+            {{game.price | price}}
           </div>
         </div>
       }
