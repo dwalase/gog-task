@@ -2,6 +2,7 @@
 
 .dropdown {
   @include main.text-paragraph-large;
+  @include main.border-light;
 
   display: flex;
   align-items: center;
@@ -9,14 +10,13 @@
   gap: 2px;
   height: main.rem(58px);
   width: main.rem(58px);
-  border: none;
   background: transparent;
-  border-right: 1px solid main.$gray100;
-  border-left: 1px solid main.$gray100;
+  border-top: none;
+  border-bottom: none;
   transition: background-color 0.2s ease-in;
 
   &--active {
-    background: main.$gray0;
+    @include main.background-overlay;
   }
 
   &-panel {
@@ -25,9 +25,10 @@
     overflow: hidden;
 
     &__content {
-      background: main.$gray0;
+      @include main.background-overlay;
+      @include main.border-dark;
+
       box-shadow: 0 2px 10px 0 #00000080;
-      border: 1px solid #B8B8B880;
       border-top: none;
     }
   }

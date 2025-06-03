@@ -1,11 +1,31 @@
 @use "sass/utils/palette" as palette;
 
+@mixin border-light {
+  border: 1px solid var(--border-light);
+}
+
+@mixin border-dark {
+  border: 1px solid var(--border-dark);
+}
+
+@mixin background-primary {
+  background: var(--background-primary);
+}
+
+@mixin background-header {
+  background: var(--background-header);
+}
+
 @mixin background-accent {
   background: linear-gradient(0deg, var(--background-accent-dark) 0%, var(--background-accent-light) 100%);
 }
 
 @mixin background-secondary {
   background: var(--background-secondary);
+}
+
+@mixin background-overlay {
+  background: var(--background-overlay);
 }
 
 @mixin box-shadow {

@@ -45,6 +45,12 @@
   }
 
   &__position {
+    @include main.border-light;
+
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+
     display: flex;
     align-items: center;
     overflow: hidden;

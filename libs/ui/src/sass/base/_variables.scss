@@ -1,5 +1,35 @@
 @use './sass/utils/palette' as palette;
 
+@property --background-primary {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #{palette.$gray75};
+}
+
+@property --background-header {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #{palette.$gray60};
+}
+
+@property --background-overlay {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #{palette.$gray0};
+}
+
+@property --border-light {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #{palette.$gray100};
+}
+
+@property --border-dark {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #{palette.$gray350};
+}
+
 @property --background-accent-light {
   syntax: "<color>";
   inherits: false;
