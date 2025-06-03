@@ -34,11 +34,11 @@
 
   &__badge {
     @include main.text-white;
+    @include main.text-paragraph;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 13px;
     height: main.rem(22px);
     min-width: main.rem(42px);
     background: main.$green400;

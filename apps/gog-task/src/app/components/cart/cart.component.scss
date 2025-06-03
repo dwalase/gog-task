@@ -31,8 +31,7 @@
   }
 
   &__header {
-    @include main.text-paragraph-large;
-    font-size: 15px;
+    @include main.text-paragraph-largest;
 
     display: flex;
     padding: 9px;

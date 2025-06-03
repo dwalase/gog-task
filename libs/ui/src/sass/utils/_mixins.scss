@@ -13,7 +13,7 @@
 }
 
 @mixin text-paragraph {
-  font-size: 13px;
+  font-size: rem(13px);
   line-height: 100%;
   letter-spacing: 0;
   font-weight: 600;
@@ -22,19 +22,25 @@
 @mixin text-paragraph-large {
   @include text-paragraph;
 
-  font-size: 14px;
+  font-size: rem(14px);
+}
+
+@mixin text-paragraph-largest {
+  @include text-paragraph;
+
+  font-size: rem(15px);
 }
 
 @mixin text-header {
   font-weight: 700;
-  font-size: 15px;
+  font-size: rem(15px);
   line-height: 100%;
   letter-spacing: 0;
 }
 
 @mixin text-subheader {
-  font-size: 14px;
-  line-height: 17px;
+  font-size: rem(14px);
+  line-height: rem(17px);
   letter-spacing: 0;
   font-weight: 600;
 }
