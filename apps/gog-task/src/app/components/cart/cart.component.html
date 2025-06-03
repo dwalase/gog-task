@@ -16,7 +16,9 @@
       </div>
       @for (game of inCart(); track game.id) {
         <div class="cart-panel__position">
-          <img [ngSrc]="game.thumbnail" [alt]="game.name" width="100" height="60">
+          <div class="cart-panel__thumbnail">
+            <img [ngSrc]="game.thumbnail" [alt]="game.name" fill>
+          </div>
           <div class="cart-panel__description">
             <span>{{game.name}}</span>
             <button class="remove-button lib-link" (click)="removeFromCart(game.id)">Remove</button>

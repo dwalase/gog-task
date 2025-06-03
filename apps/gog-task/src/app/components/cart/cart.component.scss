@@ -47,6 +47,7 @@
   &__position {
     display: flex;
     align-items: center;
+    overflow: hidden;
     padding: 5px;
     gap: 9px;
 
@@ -85,5 +86,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  &__thumbnail {
+    position: relative;
+    width: 100px;
+    aspect-ratio: 100/60;
   }
 }
