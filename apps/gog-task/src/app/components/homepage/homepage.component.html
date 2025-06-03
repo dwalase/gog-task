@@ -1,8 +1,10 @@
 <div class="homepage">
   <h1 class="homepage__header">GAME OF THE WEEK</h1>
   @if (featuredGame()) {
-    <div class="homepage__featured">
+    <div class="homepage__featured" [ngClass]="{'super-cool-animation': animation()}">
       <img [ngSrc]="featuredGame()?.thumbnail || ''" alt="Featured game" fill priority>
+      <button [tabIndex]="-1" class="secret-button" aria-hidden="true" disabled (click)="animation.set(!animation())">
+        SUPER SECRET BUTTON</button>
     </div>
   }
   <div class="homepage__games">

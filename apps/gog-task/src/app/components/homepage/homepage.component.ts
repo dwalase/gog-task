@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { GameStore } from '@gog-task/store';
 import { GameCardComponent } from '../game-card/game-card.component';
@@ -14,4 +14,6 @@ export class HomepageComponent {
   private readonly store = inject(GameStore);
   protected readonly games = this.store.notFeatured;
   protected readonly featuredGame = this.store.featured;
+
+  protected readonly animation = signal(false);
 }

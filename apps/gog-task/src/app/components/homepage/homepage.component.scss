@@ -36,3 +36,26 @@
     }
   }
 }
+
+.secret-button {
+  display: none;
+}
+
+
+.super-cool-animation {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  animation: rotate3d 2s infinite ease-in-out;
+}
+
+@keyframes rotate3d {
+  0% {
+    transform: rotate3d(1, 1, 1, 0deg);
+  }
+  50% {
+    transform: rotate3d(1, 1, 1, 180deg);
+  }
+  100% {
+    transform: rotate3d(1, 1, 1, 360deg);
+  }
+}
