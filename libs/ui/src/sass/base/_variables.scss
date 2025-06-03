@@ -1,5 +1,17 @@
 @use './sass/utils/palette' as palette;
 
+@property --background-accent-light {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #{palette.$pink400};
+}
+
+@property --background-accent-dark {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #{palette.$pink500};
+}
+
 @property --background-secondary {
   syntax: "<color>";
   inherits: false;

@@ -27,7 +27,7 @@
   }
 
   &--primary {
-    @include mixins.background-primary;
+    @include mixins.background-accent;
     @include mixins.text-white;
 
     border: none;
