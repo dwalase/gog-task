@@ -1,4 +1,5 @@
 <lib-card
+  [attr.data-test-id]="`game-card-${game().id}`"
   class="game-card"
   [imgUrl]="game().thumbnail"
   [header]="game().name"

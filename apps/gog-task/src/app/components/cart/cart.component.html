@@ -15,7 +15,7 @@
         </button>
       </div>
       @for (game of inCart(); track game.id) {
-        <div class="cart-panel__position">
+        <div class="cart-panel__position" [attr.data-test-id]="`cart-position-${game.id}`">
           <div class="cart-panel__thumbnail">
             <img [ngSrc]="game.thumbnail" [alt]="game.name" fill>
           </div>
