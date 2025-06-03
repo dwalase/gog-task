@@ -15,14 +15,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 42px;
-  min-width: 132px;
+  height: main.rem(42px);
+  min-width: main.rem(132px);
+  padding: 0 5px;
 }
 
 .cart-panel {
   display: grid;
-  width: 370px;
-  min-height: 100px;
+  width: main.rem(370px);
+  min-height: main.rem(100px);
   grid-auto-rows: 1fr;
 
   @include main.mobile {
@@ -90,7 +91,7 @@
 
   &__thumbnail {
     position: relative;
-    width: 100px;
+    width: main.rem(100px);
     aspect-ratio: 100/60;
   }
 }
