@@ -6,13 +6,29 @@
   padding-top: 30px;
   gap: 20px;
 
-
   &__header {
     @include main.text-header;
   }
 
+  &__featured {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1060/370;
+  }
+
   &__games {
     display: flex;
+    gap: 10px;
+    row-gap: 10px;
     justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include main.mobile {
+      justify-content: space-around;
+
+      & > * {
+        max-width: 150px;
+      }
+    }
   }
 }

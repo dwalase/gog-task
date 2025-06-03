@@ -2,7 +2,7 @@
         [ngClass]="{'dropdown--active': isOpen()}"
         (click)="switchDropdown()">
   @if (dropdownIcon()) {
-    <img [ngSrc]="dropdownIcon() || ''" alt="Shopping cart" width="16" height="16">
+    <img [ngSrc]="dropdownIcon() || ''" alt="Shopping cart" width="17" height="15">
   }
   {{ dropdownText() }}
 </button>
