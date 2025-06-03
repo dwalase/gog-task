@@ -15,19 +15,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 42px;
-  min-width: 132px;
+  height: main.rem(42px);
+  min-width: main.rem(132px);
+  padding: 0 5px;
 }
 
 .cart-panel {
   display: grid;
-  width: 370px;
-  min-height: 100px;
+  width: main.rem(370px);
+  min-height: main.rem(100px);
   grid-auto-rows: 1fr;
 
+  @include main.mobile {
+    width: 300px;
+  }
+
   &__header {
-    @include main.text-paragraph-large;
-    font-size: 15px;
+    @include main.text-paragraph-largest;
 
     display: flex;
     padding: 9px;
@@ -41,9 +45,15 @@
   }
 
   &__position {
+    @include main.border-light;
+
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+
     display: flex;
     align-items: center;
-    width: 370px;
+    overflow: hidden;
     padding: 5px;
     gap: 9px;
 
@@ -82,5 +92,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  &__thumbnail {
+    position: relative;
+    width: main.rem(100px);
+    aspect-ratio: 100/60;
   }
 }

@@ -1,5 +1,7 @@
 <div class="card">
-  <img [ngSrc]="imgUrl()" [alt]="header()" width="196" height="110">
+  <div class="card__image">
+    <img [ngSrc]="imgUrl()" [alt]="header()" width="196" height="110">
+  </div>
   <h2 class="card__title">{{ header() }}</h2>
   <div class="card__actions">
     @if (badge()) {

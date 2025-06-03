@@ -6,7 +6,12 @@
 
   display: flex;
   flex-direction: column;
-  width: 196px;
+  max-width: 196px;
+
+  &__image {
+    position: relative;
+    aspect-ratio: 196/110;
+  }
 
   &__title {
     @include main.text-subheader;
@@ -29,13 +34,13 @@
 
   &__badge {
     @include main.text-white;
+    @include main.text-paragraph;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 13px;
-    height: 22px;
-    min-width: 42px;
+    height: main.rem(22px);
+    min-width: main.rem(42px);
     background: main.$green400;
     border-radius: 2px;
     text-align: center;
